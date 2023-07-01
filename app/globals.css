@@ -64,7 +64,7 @@
 }
 /* END: Hero styles */
 
-/* START: Home styles */
+/* START: Home  styles */
 
 .home__text-container {
   @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
