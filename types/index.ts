@@ -36,3 +36,11 @@ export interface CustomButtonProps {
   rightIcon?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface FilterProps {
+  manufacturer: string;
+  year: number;
+  fuel: string;
+  limit: number;
+  model: number;
+}
