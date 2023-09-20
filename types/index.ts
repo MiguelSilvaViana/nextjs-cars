@@ -38,11 +38,11 @@ export interface CustomButtonProps {
 }
 
 export interface FilterProps {
-  manufacturer: string;
-  year: number;
-  fuel: string;
-  limit: number;
-  model: number;
+  manufacturer?: string;
+  year?: number;
+  model?: string;
+  limit?: number;
+  fuel?: string;
 }
 
 export interface OptionProps {
