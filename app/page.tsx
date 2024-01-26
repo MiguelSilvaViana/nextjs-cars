@@ -4,7 +4,7 @@ import { CustomFilter, Hero, Searchbar, CarCard, ShowMore } from '@/components';
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from '@/constants';
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: { searchParams: any }) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2023,
@@ -19,7 +19,10 @@ export default async function Home({ searchParams }) {
     <main className='overflow-hidden'>
       <Hero />
 
-      <div className='mt-12 padding-x padding-y max-width' id='discover'>
+      <div
+        className='mt-12 padding-x padding-y max-width'
+        id='discover'
+      >
         <div className='home__text-container'>
           <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
           <p>Explore the cars you might like</p>
@@ -28,8 +31,14 @@ export default async function Home({ searchParams }) {
         <div className='home__filters'>
           <Searchbar />
           <div className='home__filter-container'>
-            <CustomFilter title='fuel' options={fuels} />
-            <CustomFilter title='year' options={yearsOfProduction} />
+            <CustomFilter
+              title='fuel'
+              options={fuels}
+            />
+            <CustomFilter
+              title='year'
+              options={yearsOfProduction}
+            />
           </div>
         </div>
 
